@@ -2,14 +2,6 @@ function addWorldImage() {
     // Select all the <a> elements inside the <ul> element
     var labelLinks = document.querySelectorAll(".widget-content.list-label-widget-content ul a.label-name");
 
-
-    for (var i = labelLinks.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = labelLinks[i];
-        labelLinks[i] = labelLinks[j];
-        labelLinks[j] = temp;
-      }
-
     // Loop through each <a> element and modify its contents and style
     for (var i = 0; i < labelLinks.length; i++) {
         var labelLink = labelLinks[i];
