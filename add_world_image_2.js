@@ -12,7 +12,7 @@ function addWorldImage() {
         var imgAlt = labelText;
         var imgTag = '<img src="' + imgSrc + imgAlt.toLowerCase() + '.jpg">';
 
-        labelLink.innerHTML = '<div>' + imgTag + '</div><div></div>' + labelText + ' (' + labelCount + ')</a>';
+        labelLink.innerHTML = '<div>' + imgTag + '</div><div></div>' + labelText.replace(labelCount, '').trim() + ' (' + labelCount + ')</a>';
         labelLink.style.padding = '10px';
     }
 
