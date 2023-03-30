@@ -1,9 +1,9 @@
 function addWorldImage() {
-    var ulElement = document.querySelector('.widget-content.list-label-widget-content ul');
-    var aElements = ulElement.getElementsByTagName('a');
-    var i = 0;
-    var n = aElements.length;
-    while (Boolean(n - i)) {
+    // Select all the <a> elements inside the <ul> element
+    var labelLinks = document.querySelectorAll(".widget-content.list-label-widget-content ul a.label-name");
+
+    // Loop through each <a> element and modify its contents and style
+    for (var i = 0; i < labelLinks.length; i++) {
         var labelLink = labelLinks[i];
         var labelText = labelLink.textContent.trim();
         var labelCount = labelLink.querySelector(".label-count").textContent.trim();
@@ -14,6 +14,7 @@ function addWorldImage() {
 
         labelLink.innerHTML = '<div>' + imgTag + '</div><div></div>' + labelText + ' (' + labelCount + ')</a>';
         labelLink.style.padding = '10px';
-        i = i + 1;
     }
+
+
 }
