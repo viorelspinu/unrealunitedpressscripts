@@ -32,7 +32,7 @@ function addWorldImage() {
         }
 
         var imgAlt = labelText;
-        var imgTag = '<img src="' + imgSrc + '">';
+        var imgTag = '<img style="filter: sepia(100%)" src="' + imgSrc + '">';
 
         labelLink.innerHTML = '<div>' + imgTag + '</div><div></div>' + labelText.replace(labelCount, '').trim() + ' (' + labelCount + ')</a>';
         labelLink.style.padding = '10px';
